@@ -1,0 +1,75 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+}
+
+.container p {
+    position: absolute;
+    z-index: -1;
+}
+
+.container .card:nth-child(4n+1) {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    transition: 1s;
+}
+
+.container .card:nth-child(4n+2) {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    transition: 1s;
+}
+
+.container .card:nth-child(4n+3) {
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    transition: 1s;
+}
+
+.container .card:nth-child(4n+4) {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    transition: 1s;
+}
+
+.container:hover > .card:nth-child(4n+1){
+    transform: rotateZ(90deg) translateY(-50px);
+}
+
+.container:hover > .card:nth-child(4n+3){
+    transform: rotateZ(90deg) translateY(-50px);
+}
+
+.container:hover > .card:nth-child(4n+2){
+    transform: rotateZ(90deg) translateY(50px);
+}
+
+.container:hover > .card:nth-child(4n+4){
+    transform: rotateZ(90deg) translateY(50px);
+}
